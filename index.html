@@ -6,24 +6,26 @@
     <title>Simon Says</title>
     <link rel="stylesheet" href="styles.css">
 </head>
+
 <body>
     <div class="container">
         <h1>Simon Says</h1>
 
         <!-- Formulario para ingresar el nombre -->
         <form id="playerForm">
-            <label for="playerName">Nombre:</label>
+            <label for="playerName">Nombre</label>
             <input type="text" id="playerName" required>
+            <br>
             <button type="submit">Comenzar</button>
         </form>
 
-<!-- Los botones de colores -->
-<div id="gameArea" class="hidden">
+        <!-- Los botones de colores -->
+        <div id="gameArea" class="hidden">
             <div class="buttons">
-                <button id="red" class="game-button"></button>
                 <button id="green" class="game-button"></button>
-                <button id="blue" class="game-button"></button>
+                <button id="red" class="game-button"></button>
                 <button id="yellow" class="game-button"></button>
+                <button id="blue" class="game-button"></button>
             </div>
 
             <!-- Puntaje actual -->
@@ -57,4 +59,5 @@
 
     <script src="script.js"></script>
 </body>
+
 </html>

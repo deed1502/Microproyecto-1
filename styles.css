@@ -1,0 +1,83 @@
+h1 {
+    font-family: Impact, sans-serif;
+    font-weight: 500;
+    letter-spacing: 1px;
+}
+
+.container {
+    background-color: #ffffff; 
+    padding: 20px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); 
+    text-align: center; 
+}
+
+#playerForm label {
+    display: block; 
+    margin-bottom: 5px;
+    font-family: Impact, sans-serif;
+    font-weight: 200;
+    
+}
+
+#playerForm input {
+    padding: 6px;
+    border: 1px solid #464646;
+    border-radius: 4px;
+    width: 200px; 
+    margin-bottom: 5px;
+}
+
+#playerForm button {
+    background-color: #132fbb; 
+    color: #ffffff;
+    padding: 6px 15px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-bottom: 10px;
+}
+
+#gameArea {
+    display: flex;
+    flex-direction: column; 
+    align-items: center;
+}
+
+.buttons {
+    display: grid;
+    grid-template-columns: repeat(2, 100px); /* 2x2 grid */
+    grid-gap: 10px;
+    margin-bottom: 20px;
+}
+
+#green {
+    width: 100px;
+    height: 100px; 
+    background-color: #1eaa2f; 
+    border-radius: 100% 0 0 0;
+}
+
+#red {
+    width: 100px;
+    height: 100px; 
+    background-color: #ca0a0a; 
+    border-radius: 0 100% 0 0;
+}
+
+#yellow {
+    width: 100px;
+    height: 100px; 
+    background-color: #e7e41f; 
+    border-radius: 0 0 0 100%;
+}
+
+#blue {
+    width: 100px;
+    height: 100px; 
+    background-color: #216adf; 
+    border-radius: 0 0 100% 0;
+}
+
+/* .hidden {
+    display: none;
+} */
