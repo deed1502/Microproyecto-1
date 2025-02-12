@@ -45,7 +45,7 @@ h1 {
 
 .buttons {
     display: grid;
-    grid-template-columns: repeat(2, 100px); /* 2x2 grid */
+    grid-template-columns: repeat(2, 100px); 
     grid-gap: 10px;
     margin-bottom: 20px;
 }
