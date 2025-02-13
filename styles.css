@@ -2,82 +2,151 @@ h1 {
     font-family: Impact, sans-serif;
     font-weight: 500;
     letter-spacing: 1px;
+    font-size: 3em;
+    margin: 5px;
 }
 
 .container {
-    background-color: #ffffff; 
+    background-color: #dbdbdb;
     padding: 20px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); 
-    text-align: center; 
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    text-align: center;
 }
 
 #playerForm label {
-    display: block; 
+    display: block;
     margin-bottom: 5px;
     font-family: Impact, sans-serif;
     font-weight: 200;
-    
+    font-size: 1.5em;
+    margin-bottom: 5px;
 }
 
 #playerForm input {
     padding: 6px;
     border: 1px solid #464646;
     border-radius: 4px;
-    width: 200px; 
+    width: calc(100% - 12px);
+    max-width: 300px;
     margin-bottom: 5px;
+    box-sizing: border-box;
 }
 
 #playerForm button {
-    background-color: #132fbb; 
+    background-color: #132fbb;
     color: #ffffff;
     padding: 6px 15px;
     border: none;
-    border-radius: 4px;
+    border-radius: 5px;
     cursor: pointer;
-    margin-bottom: 10px;
+    margin-bottom: 15px;
+    cursor: pointer;
+    font-family: 'Roboto', sans-serif;
+    font-size: 1em;
+    font-weight: 600;
 }
 
 #gameArea {
     display: flex;
-    flex-direction: column; 
+    flex-direction: column;
     align-items: center;
 }
 
 .buttons {
     display: grid;
-    grid-template-columns: repeat(2, 100px); 
+    grid-template-columns: repeat(2, 120px);
     grid-gap: 10px;
-    margin-bottom: 20px;
+    margin-bottom: 10px;
+    background-color: #202020;
+    padding: 2%;
+    border-radius: 50%;
 }
 
 #green {
-    width: 100px;
-    height: 100px; 
-    background-color: #1eaa2f; 
+    width: 120px;
+    height: 120px;
+    background-color: #1eaa2f;
     border-radius: 100% 0 0 0;
 }
 
 #red {
-    width: 100px;
-    height: 100px; 
-    background-color: #ca0a0a; 
+    width: 120px;
+    height: 120px;
+    background-color: #ca0a0a;
     border-radius: 0 100% 0 0;
 }
 
 #yellow {
-    width: 100px;
-    height: 100px; 
-    background-color: #e7e41f; 
+    width: 120px;
+    height: 120px;
+    background-color: #e7e41f;
     border-radius: 0 0 0 100%;
 }
 
 #blue {
-    width: 100px;
-    height: 100px; 
-    background-color: #216adf; 
+    width: 120px;
+    height: 120px;
+    background-color: #216adf;
     border-radius: 0 0 100% 0;
 }
 
-/* .hidden {
+.game-button {
+    cursor: pointer;
+    opacity: 0.7; 
+    transition: opacity 0.3s ease; 
+}
+
+.game-button.active {
+    opacity: 1; 
+}
+
+.score {
+    font-family: Impact, sans-serif;
+    font-weight: 500;
+    font-size: 2em;
+    color: #535353;
+    margin-bottom: 5px;
+}
+
+#gameOverMessage p {
+    margin-top: 5px;
+    font-family: 'Roboto', sans-serif;
+    font-size: 2em;
+    font-weight: 1000;
+    color: red;
+}
+
+#restartButton {
+    background-color: #132fbb; 
+    color: #ffffff;
+    padding: 6px 30px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-family: 'Roboto', sans-serif;
+    font-size: 1em;
+    font-weight: 600;
+}
+#scoreboard {
+    font-family: 'Roboto', sans-serif;
+    font-size: 1em;
+    margin-top: 50px;
+}
+
+
+#highScoresTable {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 10px;
+}
+
+#highScoresTable th {
+    padding: 8px;
+    border: 1px solid #202020;
+    text-align: center;
+}
+
+
+.hidden {
     display: none;
-} */
+}
