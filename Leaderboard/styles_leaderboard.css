@@ -1,0 +1,35 @@
+h1 {
+    font-family: Impact, sans-serif;
+    font-weight: 500;
+    letter-spacing: 1px;
+    font-size: 2.5em;
+    margin: 20px;
+}
+
+.container {
+    background-color: #dbdbdb;
+    padding: 20px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+#scoreboard {
+    font-family: 'Roboto', sans-serif;
+    font-size: 150%;
+    margin-top: 50px;
+    text-align: center;
+}
+
+
+#highScoresTable {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 10px;
+    align-items: center;
+}
+
+#highScoresTable th {
+    padding: 8px;
+    border: 1px solid #202020;
+    text-align: center;
+}

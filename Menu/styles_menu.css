@@ -1,12 +1,19 @@
+html {
+    text-align: center;
+}
+
 h1 {
     font-family: Impact, sans-serif;
     font-weight: 500;
     letter-spacing: 1px;
     font-size: 3em;
-    margin: 5px;
+    margin: 20px;
 }
 
 .container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     background-color: #dbdbdb;
     padding: 20px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
@@ -32,7 +39,7 @@ h1 {
     box-sizing: border-box;
 }
 
-#playerForm button {
+.boton {
     background-color: #132fbb;
     color: #ffffff;
     padding: 6px 15px;
@@ -46,11 +53,6 @@ h1 {
     font-weight: 600;
 }
 
-#gameArea {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
 
 .buttons {
     display: grid;
@@ -61,6 +63,7 @@ h1 {
     padding: 2%;
     border-radius: 50%;
 }
+
 
 #green {
     width: 120px;
@@ -91,62 +94,5 @@ h1 {
 }
 
 .game-button {
-    cursor: pointer;
-    opacity: 0.7; 
-    transition: opacity 0.3s ease; 
-}
-
-.game-button.active {
-    opacity: 1; 
-}
-
-.score {
-    font-family: Impact, sans-serif;
-    font-weight: 500;
-    font-size: 2em;
-    color: #535353;
-    margin-bottom: 5px;
-}
-
-#gameOverMessage p {
-    margin-top: 5px;
-    font-family: 'Roboto', sans-serif;
-    font-size: 2em;
-    font-weight: 1000;
-    color: red;
-}
-
-#restartButton {
-    background-color: #132fbb; 
-    color: #ffffff;
-    padding: 6px 30px;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    font-family: 'Roboto', sans-serif;
-    font-size: 1em;
-    font-weight: 600;
-}
-#scoreboard {
-    font-family: 'Roboto', sans-serif;
-    font-size: 1em;
-    margin-top: 50px;
-}
-
-
-#highScoresTable {
-    width: 100%;
-    border-collapse: collapse;
-    margin-top: 10px;
-}
-
-#highScoresTable th {
-    padding: 8px;
-    border: 1px solid #202020;
-    text-align: center;
-}
-
-
-.hidden {
-    display: none;
+    opacity: 0.7;
 }
