@@ -20,6 +20,20 @@ h1 {
     align-items: center;
 }
 
+.boton {
+    background-color: #132fbb;
+    color: #ffffff;
+    padding: 6px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-bottom: 15px;
+    cursor: pointer;
+    font-family: 'Roboto', sans-serif;
+    font-size: 1em;
+    font-weight: 600;
+}
+
 .buttons {
     display: grid;
     grid-template-columns: repeat(2, 120px);
@@ -84,7 +98,7 @@ h1 {
     color: red;
 }
 
-#restartButton {
+#goToMenu {
     background-color: #132fbb; 
     color: #ffffff;
     padding: 6px 30px;

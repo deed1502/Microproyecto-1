@@ -12,7 +12,7 @@
         <h1>Simon Says</h1>
 
         <!-- Los botones de colores -->
-        <div id="gameArea" class="hidden">
+        <div id="gameArea">
             <div class="buttons">
                 <button id="green" class="game-button"></button>
                 <button id="red" class="game-button"></button>
@@ -28,10 +28,11 @@
             <!-- Mensaje de fin de juego -->
             <div id="gameOverMessage" class="hidden">
                 <p>¡Juego Terminado!</p>
-                <button id="restartButton">Reiniciar</button>
+                <button id="restart" class="boton">Volver a intentar</button>
+                <br>
+                <button id="goToMenu" class="boton" onclick="window.location.href='/Menu/menu.html'">Volver al menú principal</button>                
             </div>
         </div>
-
 
     </div>
 
