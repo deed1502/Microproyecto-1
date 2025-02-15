@@ -6,7 +6,7 @@ document.getElementById('playerForm').addEventListener('submit', function(event)
     if (playerName.trim() !== "") {
         localStorage.setItem('playerName', playerName);
 
-        window.location.href = '/Juego/index.html';
+        window.location.href = 'juego.html';
         console.log(localStorage.getItem('playerName'));
     } else {
         alert("Por favor ingresa tu nombre");

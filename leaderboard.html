@@ -1,14 +1,15 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Leaderboard</title>
     <link rel="stylesheet" href="/Leaderboard/styles_leaderboard.css">
 </head>
+
 <body>
     <div class="container">
-        <!-- Tabla de puntajes -->
         <div id="scoreboard">
             <h1>Mejores Puntajes</h1>
             <table id="highScoresTable">
@@ -19,23 +20,18 @@
                     </tr>
                 </thead>
                 <tbody>
-                    <!-- Aquí se mostrarán los puntajes -->
                 </tbody>
             </table>
         </div>
 
-        <!-- Botón para regresar al menú principal -->
-        <button class="boton" onclick="window.location.href='/Menu/menu.html'">Volver al menú principal</button>
+        <button class="boton" onclick="window.location.href='index.html'">Volver al menú principal</button>
     </div>
 
     <script>
-        // Obtener los puntajes guardados en localStorage
         const highScores = JSON.parse(localStorage.getItem('highScores')) || [];
 
-        // Seleccionar la tabla
         const tableBody = document.querySelector('#highScoresTable tbody');
 
-        // Mostrar los puntajes en la tabla
         highScores.forEach((score, index) => {
             const row = document.createElement('tr');
             const nameCell = document.createElement('td');
@@ -48,6 +44,8 @@
             row.appendChild(scoreCell);
             tableBody.appendChild(row);
         });
+
     </script>
 </body>
+
 </html>

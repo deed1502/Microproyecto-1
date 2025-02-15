@@ -4,14 +4,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Simon Says</title>
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="/Juego/styles.css">
 </head>
 
 <body>
     <div class="container">
         <h1>Simon Says</h1>
 
-        <!-- Los botones de colores -->
         <div id="gameArea">
             <div class="buttons">
                 <button id="green" class="game-button"></button>
@@ -20,23 +19,21 @@
                 <button id="blue" class="game-button"></button>
             </div>
 
-            <!-- Puntaje actual -->
             <div class="score">
                 <p>Puntaje: <span id="currentScore">0</span></p>
             </div>
 
-            <!-- Mensaje de fin de juego -->
             <div id="gameOverMessage" class="hidden">
                 <p>¡Juego Terminado!</p>
                 <button id="restart" class="boton">Volver a intentar</button>
                 <br>
-                <button id="goToMenu" class="boton" onclick="window.location.href='/Menu/menu.html'">Volver al menú principal</button>                
+                <button id="goToMenu" class="boton" onclick="window.location.href='/index.html'">Volver al menú principal</button>                
             </div>
         </div>
 
     </div>
 
-    <script src="script.js"></script>
+    <script src="/Juego/script.js"></script>
 </body>
 
 </html>
