@@ -12,15 +12,12 @@ let gameSequence = [];
 let userSequence = [];
 let score = 0;
 
-
 const sounds = {
     green: new Audio('/Sonidos/Verde.mp3'),
     red: new Audio('/Sonidos/Rojo.mp3'),
     yellow: new Audio('/Sonidos/Amarillo.mp3'),
     blue: new Audio('/Sonidos/Azul.mp3')
 };
-
-
 
 function addToSequence() {
     const colors = ['green', 'red', 'yellow', 'blue'];
@@ -45,7 +42,7 @@ function playSequence() {
 
 function activateButton(button) {
     button.classList.add('active');
-    playSound(button.id); 
+    playSound(button.id);
     setTimeout(() => {
         button.classList.remove('active');
     }, 500);
@@ -73,7 +70,7 @@ blueButton.addEventListener('click', buttonPressed);
 function checkSequence() {
     if (userSequence.length === gameSequence.length) {
         if (userSequence.every((color, index) => color === gameSequence[index])) {
-            score+=1;
+            score += 1;
             currentScoreSpan.textContent = score;
             userSequence = [];
             addToSequence();
@@ -86,9 +83,20 @@ function checkSequence() {
 
 function gameOver() {
     gameOverMessage.classList.remove('hidden');
-    const highScore = localStorage.getItem('highScore') || 0;
-    if (score > highScore) {
-        localStorage.setItem('highScore', score);
+    const playerName = localStorage.getItem('playerName') || 'Anónimo';
+    const highScores = JSON.parse(localStorage.getItem('highScores')) || [];
+
+    // Agregar el nuevo puntaje
+    highScores.push({ name: playerName, score: score });
+
+    // Ordenar los puntajes de mayor a menor
+    highScores.sort((a, b) => b.score - a.score);
+
+    // Guardar solo los 10 mejores puntajes
+    const topScores = highScores.slice(0, 10);
+    localStorage.setItem('highScores', JSON.stringify(topScores));
+
+    if (score > (highScores[0]?.score || 0)) {
         alert('¡NUEVO RECORD!');
     }
 }

@@ -23,8 +23,31 @@
                 </tbody>
             </table>
         </div>
+
+        <!-- Botón para regresar al menú principal -->
+        <button class="boton" onclick="window.location.href='/Menu/menu.html'">Volver al menú principal</button>
     </div>
- 
-        
+
+    <script>
+        // Obtener los puntajes guardados en localStorage
+        const highScores = JSON.parse(localStorage.getItem('highScores')) || [];
+
+        // Seleccionar la tabla
+        const tableBody = document.querySelector('#highScoresTable tbody');
+
+        // Mostrar los puntajes en la tabla
+        highScores.forEach((score, index) => {
+            const row = document.createElement('tr');
+            const nameCell = document.createElement('td');
+            const scoreCell = document.createElement('td');
+
+            nameCell.textContent = score.name;
+            scoreCell.textContent = score.score;
+
+            row.appendChild(nameCell);
+            row.appendChild(scoreCell);
+            tableBody.appendChild(row);
+        });
+    </script>
 </body>
 </html>

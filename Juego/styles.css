@@ -13,7 +13,6 @@ h1 {
     text-align: center;
 }
 
-
 #gameArea {
     display: flex;
     flex-direction: column;
@@ -49,6 +48,7 @@ h1 {
     height: 120px;
     background-color: #1eaa2f;
     border-radius: 100% 0 0 0;
+    transition: background-color 0.3s ease, transform 0.2s ease, box-shadow 0.3s ease;
 }
 
 #red {
@@ -56,6 +56,7 @@ h1 {
     height: 120px;
     background-color: #ca0a0a;
     border-radius: 0 100% 0 0;
+    transition: background-color 0.3s ease, transform 0.2s ease, box-shadow 0.3s ease;
 }
 
 #yellow {
@@ -63,6 +64,7 @@ h1 {
     height: 120px;
     background-color: #e7e41f;
     border-radius: 0 0 0 100%;
+    transition: background-color 0.3s ease, transform 0.2s ease, box-shadow 0.3s ease;
 }
 
 #blue {
@@ -70,16 +72,40 @@ h1 {
     height: 120px;
     background-color: #216adf;
     border-radius: 0 0 100% 0;
+    transition: background-color 0.3s ease, transform 0.2s ease, box-shadow 0.3s ease;
 }
 
 .game-button {
     cursor: pointer;
-    opacity: 0.7; 
-    transition: opacity 0.3s ease; 
+    opacity: 0.7;
+    transition: opacity 0.3s ease, background-color 0.3s ease, transform 0.2s ease, box-shadow 0.3s ease;
 }
 
 .game-button.active {
-    opacity: 1; 
+    opacity: 1;
+    transform: scale(1.1); /* Hace que el botón se agrande un poco */
+    box-shadow: 0 0 20px rgba(255, 255, 255, 0.8); /* Agrega un resplandor */
+}
+
+/* Efectos específicos para cada botón cuando está activo */
+#green.active {
+    background-color: #2ecc71; /* Verde más brillante */
+    box-shadow: 0 0 20px rgba(46, 204, 113, 0.8); /* Resplandor verde */
+}
+
+#red.active {
+    background-color: #e74c3c; /* Rojo más brillante */
+    box-shadow: 0 0 20px rgba(231, 76, 60, 0.8); /* Resplandor rojo */
+}
+
+#yellow.active {
+    background-color: #f1c40f; /* Amarillo más brillante */
+    box-shadow: 0 0 20px rgba(241, 196, 15, 0.8); /* Resplandor amarillo */
+}
+
+#blue.active {
+    background-color: #3498db; /* Azul más brillante */
+    box-shadow: 0 0 20px rgba(52, 152, 219, 0.8); /* Resplandor azul */
 }
 
 .score {
@@ -99,7 +125,7 @@ h1 {
 }
 
 #goToMenu {
-    background-color: #132fbb; 
+    background-color: #132fbb;
     color: #ffffff;
     padding: 6px 30px;
     border: none;
