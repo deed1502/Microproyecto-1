@@ -13,10 +13,10 @@ let userSequence = [];
 let score = 0;
 
 const sounds = {
-    green: new Audio('/Sonidos/Verde.mp3'),
-    red: new Audio('/Sonidos/Rojo.mp3'),
-    yellow: new Audio('/Sonidos/Amarillo.mp3'),
-    blue: new Audio('/Sonidos/Azul.mp3')
+    green: new Audio('Sonidos/Verde.mp3'),
+    red: new Audio('Sonidos/Rojo.mp3'),
+    yellow: new Audio('Sonidos/Amarillo.mp3'),
+    blue: new Audio('Sonidos/Azul.mp3')
 };
 
 function addToSequence() {
